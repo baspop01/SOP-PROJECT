@@ -7,7 +7,7 @@ const cart = () => {
         <View style={styles.container}>
             <div>
                 <div >
-                    <p style={styles.textcard}>ตะกร้า</p>
+                    <p style={styles.textcard}>ตระกร้า</p>
                 </div>
                 <div style={styles.card}>
                     <div style={styles.card2}>
@@ -28,6 +28,7 @@ const cart = () => {
                             </div>
                         </div>
                     </div>
+                    {/* ---------------------------------------------------------- */}
                     <div style={styles.card2}>
                         <div style={styles.dis}> <img style={styles.image} src='https://cdn.discordapp.com/attachments/921293798884134923/1052595279347589200/food-and-drink-5727926-4800418.png' alt="Logo" />
                             <div style={styles.textfood}>
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     },
     textcard: {
         fontSize: '2.5vw',
-        marginLeft: '2%',
+        marginLeft: '3%',
         color: '#71463C'
     },
     textfood: {
