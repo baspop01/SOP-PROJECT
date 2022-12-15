@@ -24,15 +24,19 @@ function myMenu() {
                     </div>
                     <div className="button">
                         <div>
-                        <button type='submit'>favorite</button>
-                        <button type='submit'>cart</button>
+                            {/* <button type='submit' className="manage-but"> */}
+                                <img src='https://cdn.discordapp.com/attachments/752894614448635944/1052896925231366184/heart.png' width={"30vh"} className="manage-but"></img>
+                            {/* </button> */}
+                            {/* <button type='submit' className="manage-but"> */}
+                                <img src='https://cdn.discordapp.com/attachments/752894614448635944/1052896924904202310/carts.png' width={"30vh"} className="manage-but"></img>
+                            {/* </button> */}
                         </div>
-                        <button type='submit'>back</button>
+                        <button type='submit'>ย้อนกลับ</button>
                     </div>
                 </form>
                 <div className='loading'>
-                <img src={food} alt="loading..." width={"200vh"}/>
-                <p style={{color:"gray"}}>ตั้งตารอเมนูใหม่ไม่ไหวแล้ว...</p>
+                    <img src="https://cdn.discordapp.com/attachments/752894614448635944/1052896924497346621/salad.gif" alt="loading..." width={"200vh"}/>
+                    <p style={{color:"gray"}}>ตั้งตารอเมนูใหม่ไม่ไหวแล้ว...</p>
                 </div>
             </div>
         </div>
