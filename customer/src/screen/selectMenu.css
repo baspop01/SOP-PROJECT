@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Sarabun:wght@300&display=swap');
+
+.first-container{
+    text-align: left;
+    background-color: #F8F1E1;
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Sarabun', sans-serif;
+    height: 50vh;
+    padding: 10vh;
+}
+.secound-container{
+    background-color: #F6E6C4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #705142;
+    border-radius: 3vh;
+    padding: 5vh;
+}
+.meat {
+    display: flex;
+    flex-direction: row;
+}
+.sub-meat {
+    background-color: #ffffff;
+    margin-right: 3vh;
+    padding: 1vw;
+    /* border: 1px solid #705142; */
+    /* border-radius: 5vh; */
+}
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
