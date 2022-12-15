@@ -4,7 +4,7 @@
     text-align: left;
     background-color: #F8F1E1;
     font-family: 'Prompt', sans-serif;
-    font-family: 'Sarabun', sans-serif;
+    /* font-family: 'Sarabun', sans-serif; */
     height: 80vh;
     padding: 10vh;
 }
@@ -22,8 +22,6 @@
     display: flex;
     flex-direction: column;
     width: 70vh;
-    font-family: 'Prompt', sans-serif;
-    font-family: 'Sarabun', sans-serif;
     color: #705142;
     /* margin-right: 50vh; */
 }
@@ -51,4 +49,14 @@
 }
 .manage-but{
     margin-right: 3vh;
+}
+.back-but{
+    width: 20vh;
+    height: 5vh;
+    border: 2px solid #705142;
+    border-radius: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ada4a0;
 }
