@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap'); 
 body {
     height: "100%";
     width: "100%";
     background-color: #F8F0E0;
     overflow-y: overlay;
+    font-family: 'Prompt', sans-serif;
 }
 
 .container {
@@ -18,12 +20,13 @@ body {
 .food{
     margin: 2vw;
     margin-top: 6vw;
+    background-color: black;
     position: relative;
 }
 
 .food-menu{
     background-color: #B2918A;
-    border-radius: 25%;
+    border-radius: 15%;
     margin: 2vw;
     height: 22.5vw;
     width: 18.5vw;
@@ -32,13 +35,26 @@ body {
     text-align: center;
 }
 
+.food-fav{
+    background-color: #B2918A;
+    border-radius: 2vw;
+    margin: 2vw;
+    padding: 2vw;
+    width: 90%;
+    position: relative;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+}
+
 
 .Btn-container{
     display: flex;
     justify-content: space-between;
 }
+
 .btn{
-    padding: 1vw;
+    padding: 0.5vw;
     width: 10vw;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -49,7 +65,7 @@ body {
     cursor: pointer;
 }
 .btnClick{
-    padding: 1vw;
+    padding: 0.5vw;
     width: 10vw;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -60,7 +76,7 @@ body {
     cursor: pointer;
 }
 .btnAdd{
-    padding: 1vw;
+    padding: 0.5vw;
     width: 10vw;
     margin-left: 1vw;
     margin-right: 1vw;
@@ -79,7 +95,7 @@ body {
     background-color: #F7E6C4;
     border: 1px solid #F7E6C4;
     border-radius: 2vw;
-    font-size: 0.75vw;
+    font-size: 1vw;
     cursor: pointer;
 }
 .btn:hover{
@@ -95,4 +111,24 @@ body {
     width: 10vw;
     height: 10vw;
     background-color: white;
+}
+
+.btnAddCart{
+    padding: 1.5vw;
+    width: 15vw;
+    background-color: #ECB819;
+    border: 1px solid #ECB819;
+    color: white;
+    border-radius: 2vw;
+    cursor: pointer;
+}
+.btnRemove{
+    padding: 1.5vw;
+    margin-left: 3vw;
+    width: 10vw;
+    background-color: #F36155;
+    border: 1px solid #F36155;
+    color: white;
+    border-radius: 2vw;
+    cursor: pointer;
 }

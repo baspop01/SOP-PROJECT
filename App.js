@@ -1,24 +1,25 @@
 import React from "react";
 import './mainpage.css'
+import axios from "axios";
 import { useState, useEffect } from "react";
 
 export default function App() {
   const [food, setFood] = useState([]);
   const [foodMain, setFoodMain] = useState([]);
   const [foodFav, setFoodFav] = useState([]);
-  const [btnQueue, setbtnQueue] = useState("btn");
   const [btnMain, setbtnMain] = useState("btnClick");
   const [btnFav, setbtnFave] = useState("btn");
-  const [btnOrder, setbtnOrder] = useState("btn");
   const [queue, setQueue] = useState(0);
   const [order, setOrder] = useState(0);
-
+  const [styleFoodMain, setStyleFoodMain] = useState(1);
+  const [styleFoodFav, setStyleFoodFav] = useState(0);
 
 
   useEffect(() => {
-    setFoodMain(["ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว"])
-    setFoodFav(["ชอบ", "ชอบ", "ชอบ"])
-    setFood(["ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว", "ข้าวมันกู้ว"])
+    axios.get("http://localhost:8080/food", { crossdomain: true }).then(res => {
+      setFoodMain(res.data)
+      setFood(res.data)
+    })
   }, [])
 
 
@@ -32,34 +33,52 @@ export default function App() {
         </div>
         <div className="Btn-container">
           <div style={{ textAlign: "left" }}>
-            <button className={btnQueue} onClick={() => { setbtnQueue("btnClick"); setbtnMain("btn"); setbtnFave("btn"); setbtnOrder("btn");}}>คุณคิวที่ {queue} </button>
+            <button className="btn" onClick={() => { setbtnMain("btn"); setbtnFave("btn"); window.location.href='./screen/LoginPage.js' }}>คุณคิวที่ {queue} </button>
           </div>
           <div style={{ textAlign: "center" }}>
-            <button className={btnMain} onClick={() => { setbtnQueue("btn"); setbtnMain("btnClick"); setbtnFave("btn"); setbtnOrder("btn"); setFood(foodMain)}}>เมนูหลัก</button>
-            <button className={btnFav} onClick={() => { setbtnQueue("btn"); setbtnMain("btn"); setbtnFave("btnClick"); setbtnOrder("btn"); setFood(foodFav)}}>รายการโปรด</button>
+            <button className={btnMain} onClick={() => { setbtnMain("btnClick"); setbtnFave("btn"); setFoodMain(food); setFoodFav([]); setStyleFoodMain(1); setStyleFoodFav(0) }}>เมนูหลัก</button>
+            <button className={btnFav} onClick={() => { setbtnMain("btn"); setbtnFave("btnClick"); setFoodFav(food); setFoodMain([]); setStyleFoodMain(0); setStyleFoodFav(1) }}>รายการโปรด</button>
           </div>
           <div style={{ textAlign: "right" }}>
-            <button className={btnOrder} onClick={() => { setbtnQueue("btn"); setbtnMain("btn"); setbtnFave("btn"); setbtnOrder("btnClick") }}>{order} รายการ</button>
+            <button className="btn" onClick={() => { setbtnMain("btn"); setbtnFave("btn"); }}>ตะกร้า {order}</button>
           </div>
         </div>
-        <hr style={{backgroundColor: "#69443C", height: "0.15vw", marginTop: "2vw", marginBottom: "2vw"}}/>
-        <button className="btnAdd" onClick={() => { console.log("เบลอ")}}>+ เพิ่มเมนูใหม่</button>
+        <hr style={{ backgroundColor: "#69443C", height: "0.15vw", marginTop: "2vw", marginBottom: "2vw" }} />
+        <button className="btnAdd" onClick={() => { console.log("เบลอ") }}>+ เพิ่มเมนูใหม่</button>
         <div className="food">
           {
-            food.map((value) => {
+            foodMain.map((value) => {
               return (
-                <div className="food-menu">
-                  <img class="image-menu" src="https://cdn.britannica.com/36/123536-050-95CB0C6E/Variety-fruits-vegetables.jpg"/>
-                  <p style={{fontSize: "1.5vw"}}>{value}</p>
-                  <p style={{fontSize: "1.15vw"}}>0 ฿</p>
-                  <button className="btnDetail" onClick={() => { console.log("เบลอ")}}>ดูรายละเอียด</button>
+                <div className="food-menu" style={{ opacity: styleFoodMain }} key={value._id}>
+                  <img class="image-menu" src={value.image} />
+                  <p style={{ fontSize: "1.5vw", margin: "0.75vw" }}>{value.name}</p>
+                  <p style={{ fontSize: "1.45vw", margin: "0.5vw" }}>{value.price} ฿</p>
+                  <button className="btnDetail" onClick={() => { console.log("เบลอ") }}>ดูรายละเอียด</button>
                 </div>
               )
             })
           }
+          {
+            foodFav.map((value) => {
+              return (
+                <div className="food-fav" style={{ opacity: styleFoodFav }} key={value._id}>
+                  <img class="image-menu" style={{ marginRight: "2vw" }} src={value.image} />
+                  <div style={{ marginRight: "auto" }}>
+                    <p style={{ fontSize: "1.5vw", margin: "1vw" }}>เมนู : {value.name}</p>
+                    <p style={{ fontSize: "1.55vw", margin: "1vw" }}>ราคา : {value.price} ฿</p>
+                    <button style={{ fontSize: "1vw" }} className="btnDetail" onClick={() => { console.log("เบลอ") }}>ดูรายละเอียด</button>
+                  </div>
+                  <div style={{ marginTop: "auto", marginBottom: "auto" }}>
+                    <button style={{ fontSize: "1.5vw", marginTop: "1vw" }} className="btnAddCart" onClick={() => { console.log("เบลอ") }}>เพิ่มใส่ในตะกร้า</button>
+                    <button style={{ fontSize: "1.5vw", marginTop: "1vw" }} className="btnRemove" onClick={() => { console.log("เบลอ") }}>นำออก</button>
+                  </div>
+                </div>
+              )
+            })
+          }
+
         </div>
       </div>
     </body>
   );
 }
-
