@@ -1,4 +1,4 @@
-import food from '../salad.gif';
+// import food from '../salad.gif';
 import './myMenu.css';
 function myMenu() {
     return (
@@ -31,7 +31,7 @@ function myMenu() {
                                 <img src='https://cdn.discordapp.com/attachments/752894614448635944/1052896924904202310/carts.png' width={"30vh"} className="manage-but"></img>
                             {/* </button> */}
                         </div>
-                        <button type='submit'>ย้อนกลับ</button>
+                        <div className="back-but">ย้อนกลับ</div>
                     </div>
                 </form>
                 <div className='loading'>
