@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Select from "../src/screen/selectMenu";
-
+import Mymenu from "../src/screen/myMenu" 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Select />
+    <Mymenu />
   </React.StrictMode>
 );
 
