@@ -5,6 +5,8 @@ body{
 }
 .div1{
     margin-top: 1vw;
+    font-family: 'Prompt', sans-serif;
+
 }
 .buttonOut{
     width: 10vw;
@@ -19,6 +21,8 @@ body{
 }
 .div2{
     margin-top: 2vw;
+    font-family: 'Prompt', sans-serif;
+
 }
 .buttonAll{
     width: 10vw;
@@ -104,4 +108,8 @@ form {
   }
   .fromMenu{
     margin-left: 0.5vw;
+  }
+  .div3{
+    font-family: 'Prompt', sans-serif;
+
   }

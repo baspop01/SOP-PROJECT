@@ -10,30 +10,30 @@ const mainAdmin = () => {
             <div className="div1">
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginRight: '2vw' }}>
                     <button className="buttonOut" variant="contained" style={{ cursor: 'pointer' }}>
-                        <Text style={{ fontSize: '1vw', color: 'white' }}>ออกจากระบบ</Text>
+                        <a className="div1" style={{ fontSize: '1vw', color: 'white' }}>ออกจากระบบ</a>
                     </button>
                 </div>
             </div>
             <div className="div2">
                 <div style={{ display: 'flex', justifyContent: 'center', marginRight: '2vw' }}>
                     <button className="buttonAll" variant="contained" style={{ cursor: 'pointer' }}>
-                        <Text style={{ fontSize: '1vw', color: 'black' }}>หน้าหลัก</Text>
+                        <a className="div2" style={{ fontSize: '1vw', color: 'black' }}>หน้าหลัก</a>
                     </button>
                     <button className="buttonAll" variant="contained" style={{ cursor: 'pointer' }}>
-                        <Text style={{ fontSize: '1vw', color: 'black' }}>ดูยอดทั้งหมด</Text>
+                        <a className="div2" style={{ fontSize: '1vw', color: 'black' }}>ดูยอดทั้งหมด</a>
                     </button>
                 </div>
             </div>
             <div className="div3">
                 <div style={{ display: 'flex', justifyContent: 'center', marginRight: '2vw' }}>
                     <button className="buttonAll" variant="contained" style={{ cursor: 'pointer' }}>
-                        <Text style={{ fontSize: '1vw', color: 'black' }}>รอการทำรายการ</Text>
+                        <a className="div3" style={{ fontSize: '1vw', color: 'black' }}>รอการทำรายการ</a>
                     </button>
                     <button className="buttonAll" variant="contained" style={{ cursor: 'pointer' }}>
-                        <Text style={{ fontSize: '1vw', color: 'black' }}>กำลังทำรายการ</Text>
+                        <a  className="div3" style={{ fontSize: '1vw', color: 'black' }}>กำลังทำรายการ</a>
                     </button>
                     <button className="buttonAll" variant="contained" style={{ cursor: 'pointer' }}>
-                        <Text style={{ fontSize: '1vw', color: 'black' }}>ทำรายการสำเร็จ</Text>
+                        <a className="div3" style={{ fontSize: '1vw', color: 'black' }}>ทำรายการสำเร็จ</a>
                     </button>
                 </div>
             </div>
