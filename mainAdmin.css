@@ -124,3 +124,25 @@ form {
     background-color: #347fb2;
     border: 0.25vw solid #347fb2;
 }
+.buttonBack{
+    width: 10vw;
+    border-radius: 2vw;
+    background-color: #f3f3f3;
+    border: 0.25vw solid #f3f3f3;
+    height: 2.5vw;
+}
+.buttonBack:hover {
+    background-color: #7d7f80;
+    border: 0.25vw solid #7d7f80;
+}
+.buttonMain{
+    width: 10vw;
+    border-radius: 2vw;
+    background-color: #04b4a8;
+    border: 0.25vw solid #04b4a8;
+    height: 2.5vw;
+}
+.buttonMain:hover {
+    background-color: #07716a;
+    border: 0.25vw solid #07716a;
+}
