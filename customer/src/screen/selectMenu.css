@@ -6,8 +6,8 @@
     background-color: #F8F1E1;
     font-family: 'Prompt', sans-serif;
     /* font-family: 'Sarabun', sans-serif; */
-    height: 80vh;
-    padding: 10vh;
+    /* height: 80vw; */
+    padding: 2vw;
 }
 .secound-container{
     background-color: #F6E6C4;
@@ -16,8 +16,8 @@
     justify-content: center;
     align-items: center;
     border: 2px solid #705142;
-    border-radius: 3vh;
-    padding: 5vh;
+    border-radius: 3vw;
+    padding: 5vw;
 }
 .meat {
     display: flex;
@@ -26,10 +26,10 @@
 }
 .sub-meat {
     background-color: #ffffff;
-    margin-right: 3vh;
+    margin-right: 3vw;
     padding: 1vw;
     border: 1px solid #705142;
-    border-radius: 2vh;
+    border-radius: 2vw;
 }
 .button {
     display: flex;
@@ -38,13 +38,13 @@
     align-items: flex-start;
 }
 .manage-but{
-    margin-right: 3vh;
+    margin-right: 3vw;
 }
 .buy-but{
-    width: 20vh;
-    height: 5vh;
+    width: 20vw;
+    height: 3vw;
     border: 2px solid #705142;
-    border-radius: 2vh;
+    border-radius: 2vw;
     display: flex;
     align-items: center;
     justify-content: center;
