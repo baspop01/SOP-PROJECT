@@ -113,3 +113,14 @@ form {
     font-family: 'Prompt', sans-serif;
 
   }
+  .buttonSubmit{
+    width: 10vw;
+    border-radius: 2vw;
+    background-color: #4babeb;
+    border: 0.25vw solid #4babeb;
+    height: 2.5vw;
+}
+.buttonSubmit:hover {
+    background-color: #347fb2;
+    border: 0.25vw solid #347fb2;
+}
