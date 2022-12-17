@@ -1,9 +1,9 @@
 import './App.css';
 
-function myMenu() {
+function App() {
   return (
     <div className="container">
-      <h1>เพิ่มเมนูที่ทำเอง</h1>
+      <p style={{ fontSize: "3vw", margin: 0 }}>เพิ่มเมนูที่ทำเอง</p>
       <div className='secound-container'>
       <div className="input">
                     <div className='formgroup'>
@@ -43,4 +43,4 @@ function myMenu() {
   );
 }
 
-export default myMenu;
+export default App;
