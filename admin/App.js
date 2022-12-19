@@ -1,11 +1,7 @@
 // import logo from '../logo.svg';
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import './App.css';
-function SelectMenu() {
-    const [LikeMenu, SetlikeMenu] = useState(false);
-    const toggle = () => {
-        SetlikeMenu(!LikeMenu);
-    }
+function AddMenu() {
     return (
         <div className="first-container">
             <h1>เพิ่มเมนูอาหาร</h1>
@@ -113,4 +109,4 @@ function SelectMenu() {
     );
 }
 
-export default SelectMenu;
+export default AddMenu;
