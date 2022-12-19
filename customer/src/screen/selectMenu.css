@@ -19,12 +19,13 @@
     border-radius: 3vw;
     padding: 5vw;
 }
-.meat {
+.choice {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-top: 1vw;
 }
-.sub-meat {
+.sub-choice {
     background-color: #ffffff;
     margin-right: 3vw;
     padding: 1vw;
@@ -37,7 +38,9 @@
     justify-content: space-between;
     align-items: flex-start;
 }
-.manage-but{
+.manage-button{
+    display: flex;
+    flex-direction: row;
     margin-right: 3vw;
 }
 .buy-but{
@@ -49,4 +52,11 @@
     align-items: center;
     justify-content: center;
     background-color: #ada4a0;
+}
+.add-on{
+    width: 70vw;
+    height: 3vw;
+    border: 1px solid #705142;
+    border-radius: 2vw;
+    margin-left: 1vw;
 }
